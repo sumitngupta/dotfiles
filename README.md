@@ -9,7 +9,7 @@ Mac setup managed via Claude Code sessions.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # 2. Clone this repo
-git clone <your-repo-url> ~/dotfiles
+git clone https://github.com/sumitngupta/dotfiles ~/dotfiles
 
 # 3. Run setup
 bash ~/dotfiles/setup.sh
