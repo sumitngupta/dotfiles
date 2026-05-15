@@ -19,4 +19,9 @@ ln -sf "$DOTFILES/gitconfig" ~/.gitconfig
 ln -sf "$DOTFILES/zshrc" ~/.zshrc
 ln -sf "$DOTFILES/aliases" ~/.aliases
 
+echo "==> Symlinking VS Code settings..."
+mkdir -p ~/Library/Application\ Support/Code/User
+ln -sf "$DOTFILES/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+bash "$DOTFILES/vscode/extensions.sh"
+
 echo "==> Done. Next: run bash macos.sh, then open a new terminal."
