@@ -9,6 +9,10 @@ cask "brave-browser"
 # Password management
 cask "1password"
 
+# Productivity & communication
+cask "slack"
+cask "spotify"
+
 # CLI tools
 brew "gh"
 brew "defaultbrowser"

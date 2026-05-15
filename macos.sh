@@ -8,4 +8,7 @@ echo "==> Applying macOS preferences..."
 # Trackpad: traditional scroll direction (not natural/reversed)
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
+# Default browser: set Brave via its welcome screen on first launch —
+# the defaultbrowser CLI only works after Brave has self-registered.
+
 echo "==> Done. Log out and back in for all changes to take effect."
