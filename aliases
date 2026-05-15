@@ -53,5 +53,12 @@ alias c="tr -d '\n' | pbcopy"
 # Claude Code
 alias cc="claude --dangerously-skip-permissions"
 
+# Codex
+alias cx="codex --dangerously-bypass-approvals-and-sandbox"
+
+function bcx() {
+  ssh -t -o ConnectTimeout=2 baymax-local "codex --dangerously-bypass-approvals-and-sandbox $*" 2>/dev/null || ssh -t baymax "codex --dangerously-bypass-approvals-and-sandbox $*"
+}
+
 # macOS updates
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
