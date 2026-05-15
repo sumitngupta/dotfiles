@@ -11,6 +11,7 @@ cask "1password"
 
 # Development
 cask "visual-studio-code"
+cask "codex-app"
 brew "node"
 
 # Productivity & communication
