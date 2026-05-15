@@ -20,6 +20,7 @@ cask "spotify"
 # CLI tools
 brew "gh"
 brew "defaultbrowser"
+brew "cloudflared"   # Cloudflare tunnel — required for ssh baymax
 
 # Shell
 brew "starship"

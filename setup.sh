@@ -18,6 +18,8 @@ echo "==> Symlinking dotfiles..."
 ln -sf "$DOTFILES/gitconfig" ~/.gitconfig
 ln -sf "$DOTFILES/zshrc" ~/.zshrc
 ln -sf "$DOTFILES/aliases" ~/.aliases
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+ln -sf "$DOTFILES/ssh_config" ~/.ssh/config
 
 echo "==> Symlinking VS Code settings..."
 mkdir -p ~/Library/Application\ Support/Code/User

@@ -1,0 +1,14 @@
+Host baymax-local
+    HostName 192.168.1.23
+    User sumit
+    ConnectTimeout 2
+
+Host baymax-tunnel
+    HostName ssh.sumit.dev
+    User sumit
+    ProxyCommand cloudflared access tcp --hostname %h
+
+Host baymax
+    HostName ssh.sumit.dev
+    User sumit
+    ProxyCommand cloudflared access tcp --hostname %h
