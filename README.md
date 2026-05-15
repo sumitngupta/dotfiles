@@ -13,6 +13,9 @@ git clone <your-repo-url> ~/dotfiles
 
 # 3. Run setup
 bash ~/dotfiles/setup.sh
+
+# 4. Apply macOS preferences (log out after to take effect)
+bash ~/dotfiles/macos.sh
 ```
 
 ## Structure
@@ -21,3 +24,4 @@ bash ~/dotfiles/setup.sh
 |---|---|
 | `Brewfile` | All apps and CLI tools (run `brew bundle`) |
 | `setup.sh` | Full bootstrap script for a new machine |
+| `macos.sh` | macOS system preferences (scroll direction, etc.) |

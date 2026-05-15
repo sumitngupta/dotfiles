@@ -14,4 +14,4 @@ fi
 echo "==> Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES/Brewfile"
 
-echo "==> Done. Open a new terminal to pick up any shell changes."
+echo "==> Installing packages done. Next: run bash macos.sh, then log out."
