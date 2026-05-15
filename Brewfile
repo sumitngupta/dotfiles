@@ -14,6 +14,9 @@ cask "visual-studio-code"
 cask "codex-app"
 brew "node"
 
+# Notes
+cask "obsidian"
+
 # Productivity & communication
 cask "slack"
 cask "spotify"
