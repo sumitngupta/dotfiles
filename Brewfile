@@ -22,6 +22,10 @@ cask "slack"
 cask "spotify"
 cask "setapp"        # Subscription app suite (includes CleanShot X)
 
+# Night Shift CLI
+tap "smudge/smudge"
+brew "smudge/smudge/nightlight"
+
 # CLI tools
 brew "gh"
 brew "defaultbrowser"

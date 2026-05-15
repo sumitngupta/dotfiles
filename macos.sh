@@ -21,4 +21,7 @@ defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock largesize -int 58
 killall Dock
 
+# Night Shift: sunset to sunrise schedule, enabled
+nightlight schedule start && nightlight on
+
 echo "==> Done. Log out and back in for all changes to take effect."
