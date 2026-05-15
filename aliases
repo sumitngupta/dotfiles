@@ -46,5 +46,8 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Clipboard
 alias c="tr -d '\n' | pbcopy"
 
+# Claude Code
+alias cc="claude --dangerously-skip-permissions"
+
 # macOS updates
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
