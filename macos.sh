@@ -5,6 +5,9 @@ set -e
 
 echo "==> Applying macOS preferences..."
 
+# Dark mode
+osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
+
 # Trackpad: traditional scroll direction (not natural/reversed)
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
