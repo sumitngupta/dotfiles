@@ -17,6 +17,7 @@ brew "node"
 # Productivity & communication
 cask "slack"
 cask "spotify"
+cask "setapp"        # Subscription app suite (includes CleanShot X)
 
 # CLI tools
 brew "gh"

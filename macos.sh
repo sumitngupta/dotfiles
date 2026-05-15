@@ -14,4 +14,11 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 # Default browser: set Brave via its welcome screen on first launch —
 # the defaultbrowser CLI only works after Brave has self-registered.
 
+# Dock: auto-hide, magnification ~20% above base size
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock tilesize -int 48
+defaults write com.apple.dock largesize -int 58
+killall Dock
+
 echo "==> Done. Log out and back in for all changes to take effect."
