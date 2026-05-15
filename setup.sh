@@ -14,4 +14,7 @@ fi
 echo "==> Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES/Brewfile"
 
-echo "==> Installing packages done. Next: run bash macos.sh, then log out."
+echo "==> Symlinking dotfiles..."
+ln -sf "$DOTFILES/gitconfig" ~/.gitconfig
+
+echo "==> Done. Next: run bash macos.sh, then log out to apply all changes."
