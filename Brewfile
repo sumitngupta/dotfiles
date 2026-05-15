@@ -9,6 +9,9 @@ cask "brave-browser"
 # Password management
 cask "1password"
 
+# Development
+cask "visual-studio-code"
+
 # Productivity & communication
 cask "slack"
 cask "spotify"
