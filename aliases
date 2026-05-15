@@ -3,6 +3,10 @@ function baymax() {
   ssh -o ConnectTimeout=2 baymax-local "$@" 2>/dev/null || ssh baymax "$@"
 }
 
+function bcc() {
+  ssh -t -o ConnectTimeout=2 baymax-local "claude --dangerously-skip-permissions $*" 2>/dev/null || ssh -t baymax "claude --dangerously-skip-permissions $*"
+}
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
