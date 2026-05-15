@@ -1,3 +1,64 @@
 [user]
 	name = Sumit Gupta
 	email = sumitngupta@gmail.com
+
+[github]
+	user = sumitngupta
+
+[alias]
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	s = status -s
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	publish = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	fb = "!f() { git branch -a --contains $1; }; f"
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	contributors = shortlog --summary --numbered
+	branches = branch -a
+	remotes = remote -v
+	aliases = config --get-regexp alias
+
+[core]
+	trustctime = false
+	precomposeunicode = false
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[diff]
+	renames = copies
+	indentHeuristic = true
+
+[help]
+	autocorrect = 1
+
+[merge]
+	log = true
+
+[push]
+	default = simple
+	followTags = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

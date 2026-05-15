@@ -16,5 +16,7 @@ brew bundle --file="$DOTFILES/Brewfile"
 
 echo "==> Symlinking dotfiles..."
 ln -sf "$DOTFILES/gitconfig" ~/.gitconfig
+ln -sf "$DOTFILES/zshrc" ~/.zshrc
+ln -sf "$DOTFILES/aliases" ~/.aliases
 
-echo "==> Done. Next: run bash macos.sh, then log out to apply all changes."
+echo "==> Done. Next: run bash macos.sh, then open a new terminal."

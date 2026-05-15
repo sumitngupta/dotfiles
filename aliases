@@ -1,0 +1,45 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/projects"
+
+# Shell
+alias g="git"
+alias h="history"
+alias reload="exec $SHELL -l"
+alias path='echo -e ${PATH//:/\\n}'
+
+# ls
+alias ls="command ls -G"
+alias l="ls -lF"
+alias la="ls -laF"
+alias lsd="ls -lF | grep --color=never '^d'"
+
+# grep with color
+alias grep='grep --color=auto'
+
+# Networking
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+# Filesystem
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Finder hidden files
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Lock screen
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# macOS updates
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
