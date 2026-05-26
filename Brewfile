@@ -5,6 +5,7 @@ tap "homebrew/cask-versions"
 
 # Browsers
 cask "brave-browser"
+cask "firefox"
 
 # Password management
 cask "1password"
