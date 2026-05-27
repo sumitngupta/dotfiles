@@ -21,6 +21,8 @@ cask "obsidian"
 # Productivity & communication
 cask "slack"
 cask "signal"
+cask "telegram"
+cask "zoom"
 cask "spotify"
 cask "setapp"        # Subscription app suite (includes CleanShot X)
 
