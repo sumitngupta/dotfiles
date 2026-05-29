@@ -18,6 +18,9 @@ brew "node"
 # Notes
 cask "obsidian"
 
+# Media
+cask "vlc"
+
 # Productivity & communication
 cask "slack"
 cask "signal"
