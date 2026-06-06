@@ -21,6 +21,9 @@ cask "obsidian"
 # Media
 cask "vlc"
 
+# 3D printing
+cask "bambu-studio"
+
 # Productivity & communication
 cask "slack"
 cask "signal"
