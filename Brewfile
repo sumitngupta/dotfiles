@@ -39,7 +39,7 @@ brew "smudge/smudge/nightlight"
 # CLI tools
 brew "gh"
 brew "defaultbrowser"
-brew "cloudflared"   # Cloudflare tunnel — required for ssh baymax
+brew "cloudflared"
 
 # Shell
 brew "starship"

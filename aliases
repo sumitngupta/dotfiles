@@ -1,4 +1,4 @@
-# Baymax — try local network first, fall back to Cloudflare tunnel
+# Baymax — try local network first, fall back to Tailscale
 function baymax() {
   ssh -o ConnectTimeout=2 baymax-local "$@" 2>/dev/null || ssh baymax "$@"
 }

@@ -4,11 +4,9 @@ Host baymax-local
     ConnectTimeout 2
 
 Host baymax-tunnel
-    HostName ssh.sumit.dev
+    HostName baymax.tail195562.ts.net
     User sumit
-    ProxyCommand cloudflared access tcp --hostname %h
 
 Host baymax
-    HostName ssh.sumit.dev
+    HostName baymax.tail195562.ts.net
     User sumit
-    ProxyCommand cloudflared access tcp --hostname %h
