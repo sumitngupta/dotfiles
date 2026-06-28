@@ -5,6 +5,13 @@ set -e
 
 echo "==> Applying macOS preferences..."
 
+disable_symbolic_hotkey() {
+  local hotkey_id="$1"
+
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add "$hotkey_id" \
+    '<dict><key>enabled</key><false/></dict>'
+}
+
 # Dark mode
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
 
@@ -20,6 +27,19 @@ defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock largesize -int 58
 killall Dock
+
+# Raycast: use as the Spotlight replacement on Cmd-Space.
+# Hotkey IDs 64/65 are Spotlight; 60/61 are Input Sources shortcuts.
+disable_symbolic_hotkey 60
+disable_symbolic_hotkey 61
+disable_symbolic_hotkey 64
+disable_symbolic_hotkey 65
+defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+defaults write com.raycast.macos startupEnabled -bool true
+if [ -d "/Applications/Raycast.app" ]; then
+  open -a Raycast
+fi
+echo "    If Raycast has a delay on Cmd-Space, disable Siri's hold-Cmd-Space shortcut manually."
 
 # Night Shift: sunset to sunrise schedule, enabled
 nightlight schedule start && nightlight on

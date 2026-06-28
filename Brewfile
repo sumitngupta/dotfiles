@@ -25,6 +25,7 @@ cask "vlc"
 cask "bambu-studio"
 
 # Productivity & communication
+cask "raycast"
 cask "slack"
 cask "signal"
 cask "telegram"
