@@ -5,11 +5,14 @@ set -e
 
 echo "==> Applying macOS preferences..."
 
-disable_symbolic_hotkey() {
+write_disabled_symbolic_hotkey() {
   local hotkey_id="$1"
+  local char_code="$2"
+  local key_code="$3"
+  local modifier_flags="$4"
 
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add "$hotkey_id" \
-    '<dict><key>enabled</key><false/></dict>'
+    "{ enabled = 0; value = { parameters = ($char_code, $key_code, $modifier_flags); type = standard; }; }"
 }
 
 # Dark mode
@@ -30,10 +33,10 @@ killall Dock
 
 # Raycast: use as the Spotlight replacement on Cmd-Space.
 # Hotkey IDs 64/65 are Spotlight; 60/61 are Input Sources shortcuts.
-disable_symbolic_hotkey 60
-disable_symbolic_hotkey 61
-disable_symbolic_hotkey 64
-disable_symbolic_hotkey 65
+write_disabled_symbolic_hotkey 60 32 49 262144
+write_disabled_symbolic_hotkey 61 32 49 786432
+write_disabled_symbolic_hotkey 64 32 49 1048576
+write_disabled_symbolic_hotkey 65 32 49 1179648
 defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
 defaults write com.raycast.macos startupEnabled -bool true
 if [ -d "/Applications/Raycast.app" ]; then
