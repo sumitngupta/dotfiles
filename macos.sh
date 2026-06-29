@@ -39,6 +39,9 @@ write_disabled_symbolic_hotkey 64 32 49 1048576
 write_disabled_symbolic_hotkey 65 32 49 1179648
 defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
 defaults write com.raycast.macos startupEnabled -bool true
+killall Spotlight 2>/dev/null || true
+killall SystemUIServer 2>/dev/null || true
+killall cfprefsd 2>/dev/null || true
 if [ -d "/Applications/Raycast.app" ]; then
   open -a Raycast
 fi
