@@ -1,8 +1,6 @@
 # Brewfile — managed via Claude Code sessions
 # Run `brew bundle` to install everything
 
-tap "homebrew/cask-versions"
-
 # Browsers
 cask "brave-browser"
 cask "firefox"
@@ -26,6 +24,7 @@ cask "bambu-studio"
 
 # Productivity & communication
 cask "raycast"
+cask "discord"
 cask "slack"
 cask "signal"
 cask "telegram"
