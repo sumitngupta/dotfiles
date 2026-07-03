@@ -4,6 +4,7 @@
 # Browsers
 cask "brave-browser"
 cask "firefox"
+cask "opera"
 
 # Password management
 cask "1password"
