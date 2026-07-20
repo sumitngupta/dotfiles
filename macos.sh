@@ -29,6 +29,11 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock largesize -int 58
+# Hot Corners: top-right shows all windows, bottom-left shows Desktop.
+defaults write com.apple.dock wvous-tr-corner -int 3
+defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 4
+defaults write com.apple.dock wvous-bl-modifier -int 0
 killall Dock
 
 # Raycast: use as the Spotlight replacement on Cmd-Space.
