@@ -3,6 +3,9 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# User-local binaries
+export PATH="$HOME/.local/bin:$PATH"
+
 # Aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
