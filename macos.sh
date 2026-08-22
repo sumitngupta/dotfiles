@@ -5,6 +5,12 @@ set -e
 
 echo "==> Applying macOS preferences..."
 
+echo "==> Checking for Herdr..."
+if ! command -v herdr &>/dev/null; then
+  echo "Installing Herdr..."
+  curl -fsSL https://herdr.dev/install.sh | sh
+fi
+
 write_disabled_symbolic_hotkey() {
   local hotkey_id="$1"
   local char_code="$2"

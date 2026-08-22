@@ -14,6 +14,12 @@ fi
 echo "==> Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES/Brewfile"
 
+echo "==> Checking for Herdr..."
+if ! command -v herdr &>/dev/null; then
+  echo "Installing Herdr..."
+  curl -fsSL https://herdr.dev/install.sh | sh
+fi
+
 echo "==> Symlinking dotfiles..."
 ln -sf "$DOTFILES/gitconfig" ~/.gitconfig
 ln -sf "$DOTFILES/zshrc" ~/.zshrc
